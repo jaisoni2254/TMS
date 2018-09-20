@@ -1,22 +1,13 @@
-<div class="app-title">
-  <div>
-    <h1><i class="fa fa-folder" aria-hidden="true"></i> Branch Details</h1>
-     
-  </div>
-  <ul class="app-breadcrumb breadcrumb">
-    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-  </ul>
-</div>
 
-<br>
+<router-outlet></router-outlet>
+
 
 <div class="app-title">
   <div>
     <h1><i class="fa fa-folder" aria-hidden="true"></i> Add Branch</h1>
-     
+
   </div>
- 
+
 </div>
 
 <div class="row">
@@ -26,9 +17,15 @@
       <div class="tile-body">
         <form>
           <div class="form-group">
-            <label class="control-label">Name</label>
+            <label class="control-label">Name : </label>
             <input class="form-control" type="text" placeholder="Enter full name">
           </div>
+
+          <div class="form-group">
+            <label class="control-label">Iteration Number or Name : </label>
+            <input class="form-control" type="text" placeholder="Iteration number or name">
+          </div>
+
           <div class="form-group">
             <label class="control-label">User Story Name & Number </label>
             <input class="form-control" type="email" placeholder="Enter email address">
@@ -37,7 +34,7 @@
             <label class="control-label">Description</label>
             <textarea class="form-control" rows="2" placeholder="Enter your address"></textarea>
           </div>
-          
+
         </form>
       </div>
       <div class="tile-footer">
@@ -46,26 +43,541 @@
       </div>
     </div>
   </div>
-   
+
   <div class="clearix"></div>
+</div>
+
+<div class="clearix"></div>
+
+<div class="app-title" style="margin-top:10px;">
+  <div>
+    <h1><i class="fa fa-folder" aria-hidden="true"></i> Branch Details</h1>
+
+  </div>
+
+</div>
+
+
+<div class="row" style="margin-top:30px;">
   <div class="col-md-12">
     <div class="tile">
-      <h3 class="tile-title">Subscribe</h3>
       <div class="tile-body">
-        <form class="row">
-          <div class="form-group col-md-3">
-            <label class="control-label">Name</label>
-            <input class="form-control" type="text" placeholder="Enter your name">
+        <div id="sampleTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="sampleTable_length"><label>Show <select name="sampleTable_length"
+                    aria-controls="sampleTable" class="form-control form-control-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select> entries</label></div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="sampleTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm"
+                    placeholder="" aria-controls="sampleTable"></label></div>
+            </div>
           </div>
-          <div class="form-group col-md-3">
-            <label class="control-label">Email</label>
-            <input class="form-control" type="text" placeholder="Enter your email">
+          <div class="row">
+            <div class="col-sm-12">
+              <table class="table table-hover table-bordered dataTable no-footer" id="sampleTable" role="grid"
+                aria-describedby="sampleTable_info">
+                <thead>
+                  <tr role="row">
+                    <th class="sorting_desc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1"
+                      aria-label="Name: activate to sort column ascending" aria-sort="descending">Name</th>
+                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">Iteration
+                      Number or Name</th>
+                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending">User
+                      Story Name & Number</th>
+                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending">Developer</th>
+                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending">Tester</th>
+                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending">Create-Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Zorita Serrano</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">56</td>
+                    <td class="">2012/06/01</td>
+                    <td class="">$115,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Zenaida Frank</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">New York</td>
+                    <td class="">63</td>
+                    <td class="">2010/01/04</td>
+                    <td class="">$125,250</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Yuri Berry</td>
+                    <td class="">Chief Marketing Officer (CMO)</td>
+                    <td class="">New York</td>
+                    <td class="">40</td>
+                    <td class="">2009/06/25</td>
+                    <td class="">$675,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Vivian Harrell</td>
+                    <td class="">Financial Controller</td>
+                    <td class="">San Francisco</td>
+                    <td class="">62</td>
+                    <td class="">2009/02/14</td>
+                    <td class="">$452,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Unity Butler</td>
+                    <td class="">Marketing Designer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">47</td>
+                    <td class="">2009/12/09</td>
+                    <td class="">$85,675</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Timothy Mooney</td>
+                    <td class="">Office Manager</td>
+                    <td class="">London</td>
+                    <td class="">37</td>
+                    <td class="">2008/12/11</td>
+                    <td class="">$136,200</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Tiger Nixon</td>
+                    <td class="">System Architect</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">61</td>
+                    <td class="">2011/04/25</td>
+                    <td class="">$320,800</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Thor Walton</td>
+                    <td class="">Developer</td>
+                    <td class="">New York</td>
+                    <td class="">61</td>
+                    <td class="">2013/08/11</td>
+                    <td class="">$98,540</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Tatyana Fitzpatrick</td>
+                    <td class="">Regional Director</td>
+                    <td class="">London</td>
+                    <td class="">19</td>
+                    <td class="">2010/03/17</td>
+                    <td class="">$385,750</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Suki Burks</td>
+                    <td class="">Developer</td>
+                    <td class="">London</td>
+                    <td class="">53</td>
+                    <td class="">2009/10/22</td>
+                    <td class="">$114,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Sonya Frost</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">23</td>
+                    <td class="">2008/12/13</td>
+                    <td class="">$103,600</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Shou Itou</td>
+                    <td class="">Regional Marketing</td>
+                    <td class="">Tokyo</td>
+                    <td class="">20</td>
+                    <td class="">2011/08/14</td>
+                    <td class="">$163,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Shad Decker</td>
+                    <td class="">Regional Director</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">51</td>
+                    <td class="">2008/11/13</td>
+                    <td class="">$183,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Serge Baldwin</td>
+                    <td class="">Data Coordinator</td>
+                    <td class="">Singapore</td>
+                    <td class="">64</td>
+                    <td class="">2012/04/09</td>
+                    <td class="">$138,575</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Sakura Yamamoto</td>
+                    <td class="">Support Engineer</td>
+                    <td class="">Tokyo</td>
+                    <td class="">37</td>
+                    <td class="">2009/08/19</td>
+                    <td class="">$139,575</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Rhona Davidson</td>
+                    <td class="">Integration Specialist</td>
+                    <td class="">Tokyo</td>
+                    <td class="">55</td>
+                    <td class="">2010/10/14</td>
+                    <td class="">$327,900</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Quinn Flynn</td>
+                    <td class="">Support Lead</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">22</td>
+                    <td class="">2013/03/03</td>
+                    <td class="">$342,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Prescott Bartlett</td>
+                    <td class="">Technical Author</td>
+                    <td class="">London</td>
+                    <td class="">27</td>
+                    <td class="">2011/05/07</td>
+                    <td class="">$145,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Paul Byrd</td>
+                    <td class="">Chief Financial Officer (CFO)</td>
+                    <td class="">New York</td>
+                    <td class="">64</td>
+                    <td class="">2010/06/09</td>
+                    <td class="">$725,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Olivia Liang</td>
+                    <td class="">Support Engineer</td>
+                    <td class="">Singapore</td>
+                    <td class="">64</td>
+                    <td class="">2011/02/03</td>
+                    <td class="">$234,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Michelle House</td>
+                    <td class="">Integration Specialist</td>
+                    <td class="">Sidney</td>
+                    <td class="">37</td>
+                    <td class="">2011/06/02</td>
+                    <td class="">$95,400</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Michael Silva</td>
+                    <td class="">Marketing Designer</td>
+                    <td class="">London</td>
+                    <td class="">66</td>
+                    <td class="">2012/11/27</td>
+                    <td class="">$198,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Michael Bruce</td>
+                    <td class="">Javascript Developer</td>
+                    <td class="">Singapore</td>
+                    <td class="">29</td>
+                    <td class="">2011/06/27</td>
+                    <td class="">$183,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Martena Mccray</td>
+                    <td class="">Post-Sales support</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">46</td>
+                    <td class="">2011/03/09</td>
+                    <td class="">$324,050</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Lael Greer</td>
+                    <td class="">Systems Administrator</td>
+                    <td class="">London</td>
+                    <td class="">21</td>
+                    <td class="">2009/02/27</td>
+                    <td class="">$103,500</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Jonas Alexander</td>
+                    <td class="">Developer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">30</td>
+                    <td class="">2010/07/14</td>
+                    <td class="">$86,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Jennifer Chang</td>
+                    <td class="">Regional Director</td>
+                    <td class="">Singapore</td>
+                    <td class="">28</td>
+                    <td class="">2010/11/14</td>
+                    <td class="">$357,650</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Jennifer Acosta</td>
+                    <td class="">Junior Javascript Developer</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">43</td>
+                    <td class="">2013/02/01</td>
+                    <td class="">$75,650</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Jenette Caldwell</td>
+                    <td class="">Development Lead</td>
+                    <td class="">New York</td>
+                    <td class="">30</td>
+                    <td class="">2011/09/03</td>
+                    <td class="">$345,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Jena Gaines</td>
+                    <td class="">Office Manager</td>
+                    <td class="">London</td>
+                    <td class="">30</td>
+                    <td class="">2008/12/19</td>
+                    <td class="">$90,560</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Jackson Bradshaw</td>
+                    <td class="">Director</td>
+                    <td class="">New York</td>
+                    <td class="">65</td>
+                    <td class="">2008/09/26</td>
+                    <td class="">$645,750</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Howard Hatfield</td>
+                    <td class="">Office Manager</td>
+                    <td class="">San Francisco</td>
+                    <td class="">51</td>
+                    <td class="">2008/12/16</td>
+                    <td class="">$164,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Hope Fuentes</td>
+                    <td class="">Secretary</td>
+                    <td class="">San Francisco</td>
+                    <td class="">41</td>
+                    <td class="">2010/02/12</td>
+                    <td class="">$109,850</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Herrod Chandler</td>
+                    <td class="">Sales Assistant</td>
+                    <td class="">San Francisco</td>
+                    <td class="">59</td>
+                    <td class="">2012/08/06</td>
+                    <td class="">$137,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Hermione Butler</td>
+                    <td class="">Regional Director</td>
+                    <td class="">London</td>
+                    <td class="">47</td>
+                    <td class="">2011/03/21</td>
+                    <td class="">$356,250</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Haley Kennedy</td>
+                    <td class="">Senior Marketing Designer</td>
+                    <td class="">London</td>
+                    <td class="">43</td>
+                    <td class="">2012/12/18</td>
+                    <td class="">$313,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Gloria Little</td>
+                    <td class="">Systems Administrator</td>
+                    <td class="">New York</td>
+                    <td class="">59</td>
+                    <td class="">2009/04/10</td>
+                    <td class="">$237,500</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Gavin Joyce</td>
+                    <td class="">Developer</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">42</td>
+                    <td class="">2010/12/22</td>
+                    <td class="">$92,575</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Gavin Cortez</td>
+                    <td class="">Team Leader</td>
+                    <td class="">San Francisco</td>
+                    <td class="">22</td>
+                    <td class="">2008/10/26</td>
+                    <td class="">$235,500</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Garrett Winters</td>
+                    <td class="">Accountant</td>
+                    <td class="">Tokyo</td>
+                    <td class="">63</td>
+                    <td class="">2011/07/25</td>
+                    <td class="">$170,750</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Fiona Green</td>
+                    <td class="">Chief Operating Officer (COO)</td>
+                    <td class="">San Francisco</td>
+                    <td class="">48</td>
+                    <td class="">2010/03/11</td>
+                    <td class="">$850,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Finn Camacho</td>
+                    <td class="">Support Engineer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">47</td>
+                    <td class="">2009/07/07</td>
+                    <td class="">$87,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Doris Wilder</td>
+                    <td class="">Sales Assistant</td>
+                    <td class="">Sidney</td>
+                    <td class="">23</td>
+                    <td class="">2010/09/20</td>
+                    <td class="">$85,600</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Donna Snider</td>
+                    <td class="">Customer Support</td>
+                    <td class="">New York</td>
+                    <td class="">27</td>
+                    <td class="">2011/01/25</td>
+                    <td class="">$112,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Dai Rios</td>
+                    <td class="">Personnel Lead</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">35</td>
+                    <td class="">2012/09/26</td>
+                    <td class="">$217,500</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Colleen Hurst</td>
+                    <td class="">Javascript Developer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">39</td>
+                    <td class="">2009/09/15</td>
+                    <td class="">$205,500</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Charde Marshall</td>
+                    <td class="">Regional Director</td>
+                    <td class="">San Francisco</td>
+                    <td class="">36</td>
+                    <td class="">2008/10/16</td>
+                    <td class="">$470,600</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Cedric Kelly</td>
+                    <td class="">Senior Javascript Developer</td>
+                    <td class="">Edinburgh</td>
+                    <td class="">22</td>
+                    <td class="">2012/03/29</td>
+                    <td class="">$433,060</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Cara Stevens</td>
+                    <td class="">Sales Assistant</td>
+                    <td class="">New York</td>
+                    <td class="">46</td>
+                    <td class="">2011/12/06</td>
+                    <td class="">$145,600</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Caesar Vance</td>
+                    <td class="">Pre-Sales Support</td>
+                    <td class="">New York</td>
+                    <td class="">21</td>
+                    <td class="">2011/12/12</td>
+                    <td class="">$106,450</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Bruno Nash</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">London</td>
+                    <td class="">38</td>
+                    <td class="">2011/05/03</td>
+                    <td class="">$163,500</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Brielle Williamson</td>
+                    <td class="">Integration Specialist</td>
+                    <td class="">New York</td>
+                    <td class="">61</td>
+                    <td class="">2012/12/02</td>
+                    <td class="">$372,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Brenden Wagner</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">San Francisco</td>
+                    <td class="">28</td>
+                    <td class="">2011/06/07</td>
+                    <td class="">$206,850</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Bradley Greer</td>
+                    <td class="">Software Engineer</td>
+                    <td class="">London</td>
+                    <td class="">41</td>
+                    <td class="">2012/10/13</td>
+                    <td class="">$132,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Ashton Cox</td>
+                    <td class="">Junior Technical Author</td>
+                    <td class="">San Francisco</td>
+                    <td class="">66</td>
+                    <td class="">2009/01/12</td>
+                    <td class="">$86,000</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Angelica Ramos</td>
+                    <td class="">Chief Executive Officer (CEO)</td>
+                    <td class="">London</td>
+                    <td class="">47</td>
+                    <td class="">2009/10/09</td>
+                    <td class="">$1,200,000</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Airi Satou</td>
+                    <td class="">Accountant</td>
+                    <td class="">Tokyo</td>
+                    <td class="">33</td>
+                    <td class="">2008/11/28</td>
+                    <td class="">$162,700</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="form-group col-md-4 align-self-end">
-            <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Subscribe</button>
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <div class="dataTables_info" id="sampleTable_info" role="status" aria-live="polite">Showing 1 to 57 of 57
+                entries</div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="sampleTable_paginate">
+                <ul class="pagination">
+                  <li class="paginate_button page-item previous disabled" id="sampleTable_previous"><a href="#"
+                      aria-controls="sampleTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                  <li class="paginate_button page-item active"><a href="#" aria-controls="sampleTable" data-dt-idx="1"
+                      tabindex="0" class="page-link">1</a></li>
+                  <li class="paginate_button page-item next disabled" id="sampleTable_next"><a href="#" aria-controls="sampleTable"
+                      data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<router-outlet></router-outlet>

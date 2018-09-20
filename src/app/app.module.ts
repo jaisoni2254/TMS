@@ -7,9 +7,14 @@ import { MemberComponent } from './member/member.component';
 import { WsrComponent } from './wsr/wsr.component';
 import { WsrSettingComponent } from './wsr-setting/wsr-setting.component';
 import { AddBranchComponent } from './add-branch/add-branch.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'Brach', component: AddBranchComponent },
+  { path: 'Users', component: AddUserComponent },
+  { path: 'Branch', component: AddBranchComponent },
 ];
 @NgModule({
   declarations: [
@@ -18,14 +23,14 @@ const appRoutes: Routes = [
     MemberComponent,
     WsrComponent,
     WsrSettingComponent,
-    AddBranchComponent
+    AddBranchComponent,
+    AddUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    AppRoutingModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
